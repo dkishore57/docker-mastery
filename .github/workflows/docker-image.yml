@@ -21,6 +21,6 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        IMAGE_TAG=dk:$(date +%s)
+        IMAGE_TAG=dk-$(date +%s)
         docker build . --file Dockerfile --tag kishoredk/test:$IMAGE_TAG
         docker push kishoredk/test:$IMAGE_TAG
